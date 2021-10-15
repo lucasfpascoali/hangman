@@ -8,14 +8,19 @@ module GameLogic
     dictionary = File.open('5desk.txt', 'r')
     random_line_number.times { dictionary.gets }
 
-    word = ''
+    @word = ''
     loop do
-      word = dictionary.gets.chomp
-      break if word.length.between?(5, 12)
+      @word = dictionary.gets.chomp
+      break if @word.length.between?(5, 12)
     end
     dictionary.close
-    word
   end
+
+  def mode_selection
+
+  end
+
+
 
   private
 
